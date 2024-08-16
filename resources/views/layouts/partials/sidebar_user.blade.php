@@ -99,6 +99,21 @@
             </ul>
         </div>
         <div class="menu">
+            <p class="title">Contact</p>
+            <ul>
+                <li>
+                    <a href="{{ route('contacts.index') }}">
+                        <i class="ph ph-address-book-tabs" style="font-size: 28px; color: #000000;"></i>
+                        <span class="text">Contact</span>
+                        @if(isset($unreadMessages) && $unreadMessages > 0)
+                            <span class="notification-badge">{{ $unreadMessages }}</span>
+                        @endif
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+        <div class="menu">
             <p class="title">Settings</p>
             <ul>
                 <li>

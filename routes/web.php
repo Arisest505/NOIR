@@ -8,7 +8,7 @@ use App\Http\Controllers\RecursosHumano\AccessUserController;
 use App\Http\Controllers\LOGISTIC\MESSAGE\MessageController;
 use App\Http\Controllers\LOGISTIC\WAREHOUSE\WarehouseController;
 use App\Http\Controllers\LOGISTIC\WAREHOUSE\InformationWarehouseController;
-
+use App\Http\Controllers\CONTACT\ContactController;
 Auth::routes();
 // Ruta raíz
 
@@ -46,3 +46,7 @@ Route::prefix('logistic/warehouse')->group(function () {
 //Rutas de Message y Notifications
 Route::get('/messages', [MessageController::class, 'index'])->name('messages.index');
 Route::post('/messages', [MessageController::class, 'store'])->name('messages.store');
+
+//Ruta de Contact
+Route::resource('contacts', ContactController::class);
+

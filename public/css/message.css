@@ -1,0 +1,382 @@
+/* Contenedor principal */
+.messaging-container {
+    display: flex;
+    height: 90vh;
+    background-color: #f9f9f9;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+@media(min-width: 768px) {
+    .messaging-container {
+        flex-direction: row;
+    }
+}
+
+/* Lista de contactos */
+.contact-list {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    overflow-y: auto;
+    padding: 10px;
+    height: 30vh;
+    box-sizing: border-box;
+}
+
+@media(min-width: 768px) {
+    .contact-list {
+        width: 30%;
+        border-bottom: none;
+        border-right: 1px solid #ccc;
+        height: auto;
+    }
+}
+
+.contact-list h2 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.contact-list li.active, .contact-list li:hover {
+    background-color: #e0e0e0;
+}
+
+.contact-list li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    width: 100%;
+}
+
+.user-avatar {
+    position: relative; /* Necesario para posicionar la notificación */
+}
+
+.user-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
+/* Área de mensajes */
+.message-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 70vh;
+    box-sizing: border-box;
+}
+
+@media(min-width: 768px) {
+    .message-area {
+        width: 70%;
+        height: auto;
+    }
+}
+
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.chat-user {
+    display: flex;
+    align-items: center;
+}
+
+.chat-user img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.chat-user-info {
+    margin-left: 10px;
+}
+
+.chat-user-info h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.status {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.chat-actions i {
+    font-size: 1.2rem;
+    color: #333;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 15px;
+    scroll-behavior: smooth; /* Desplazamiento suave por defecto */
+}
+
+
+.messages ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages li {
+    max-width: 25%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    position: relative;
+    word-wrap: break-word;
+    font-size: 0.7rem; /* Reducir tamaño de letra a 70% */
+}
+
+.messages li.sent {
+    background-color: #000;
+    color: #fff;
+    align-self: flex-end;
+}
+
+.messages li.received {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+}
+
+.messages .time {
+    display: block;
+    font-size: 0.6rem; /* Reducir tamaño de la hora a 60% */
+    color: #666;
+    margin-top: 5px;
+}
+
+.attached-file {
+    max-width: 80%; /* Mostrar imágenes al 80% de su tamaño original */
+    height: auto;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+/* Formulario de envío */
+.send-message-form {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    margin-right: 8px;
+    width: calc(100% - 100px); /* Ajuste para mantener espacio para los botones */
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    cursor: pointer;
+    padding: 6px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+}
+
+button[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
+}
+
+/* Para enlaces de descarga */
+.messages a {
+    display: block;
+    color: #007BFF;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.messages a:hover {
+    text-decoration: underline;
+}
+
+/* Lightbox overlay */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Oculto por defecto */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox:target {
+    display: flex; /* Mostrar cuando se haga clic */
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo para pantallas pequeñas (teléfonos) */
+@media(max-width: 767px) {
+    .message-area {
+        width: 100%;
+    }
+
+    .send-message-form {
+        padding: 8px;
+    }
+
+    .input-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 90px); /* Asegura que los botones tengan espacio */
+        margin-bottom: 0;
+    }
+
+    .custom-file-upload {
+        width: 30px;
+        height: 30px;
+        padding: 4px;
+        margin-right: 5px;
+    }
+
+    button[type="submit"] {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+
+    .attached-file {
+        max-width: 50%; /* Las imágenes se mostrarán al 50% de su tamaño en pantallas pequeñas */
+    }
+
+    /* Ocultar información del usuario y mostrar solo avatar en la lista de contactos */
+    .contact-list li {
+        padding: 5px;
+        justify-content: center;
+    }
+
+    .user-avatar img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .user-info {
+        display: none;
+    }
+}
+
+.contact-list li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos dentro del link */
+}
+
+.user-name {
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Asegura que el nombre y la notificación estén alineados */
+}
+
+.notification-badge {
+    background-color: red;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    margin-left: 10px; /* Mantén un pequeño margen a la izquierda del badge */
+    display: inline-block;
+    vertical-align: middle;
+}

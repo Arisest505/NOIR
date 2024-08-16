@@ -1,0 +1,233 @@
+/* Contenedor de la tabla centrada */
+.table-wrapper {
+    justify-content: center;
+    margin: 0 auto;
+    padding-left: 20px; /* Espacio a la izquierda */
+    padding-right: 20px; /* Espacio a la derecha */
+    padding-top: 50px;
+}
+
+h1 {
+    padding-top: 20px;
+    padding-left: 20px; /* Espacio a la izquierda */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse; /* Eliminar espacios entre celdas */
+}
+
+.table thead {
+    background-color: #f8f9fa; /* Color de fondo para el encabezado */
+}
+
+.table th, .table td {
+    padding: 12px; /* Espaciado interno */
+    text-align: left; /* Alinear texto a la izquierda */
+    border-bottom: 1px solid #f6f6f6; /* Línea de separación entre filas */
+}
+
+.table th {
+    background-color: #007bff; /* Color de fondo para los encabezados */
+    color: #fff; /* Color del texto de los encabezados */
+    font-weight: bold; /* Negrita para los encabezados */
+}
+
+.table td {
+    background-color: #ffffff91; /* Fondo blanco para celdas */
+}
+
+.table tr:nth-child(even) {
+    background-color: #ffffff91; /* Color de fondo alternado para filas pares */
+}
+
+.table button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.table button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilo para el botón de abrir el modal */
+#openModalButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-right: 20px; /* Ajusta el valor según tu preferencia */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    float: right;
+    margin-bottom: 20px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-dialog {
+    max-width: 600px; /* Ampliado para dar más espacio */
+    margin: 1.75rem auto;
+    border-radius: 8px; /* Bordes más redondeados */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra más suave y difusa */
+    background-color: #fff;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 0;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e9ecef;
+    padding: 15px 20px;
+    background-color: #007bff; /* Color de fondo para el encabezado */
+    color: #fff; /* Color del texto en el encabezado */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.modal-title {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.close {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff; /* Color del ícono de cerrar */
+}
+
+.modal-body {
+    padding: 20px;
+    background-color: #f8f9fa; /* Fondo ligero para el cuerpo del modal */
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-control,
+.form-select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* Botones primarios */
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para las pestañas */
+.nav-tabs {
+    display: flex; /* Asegura que los elementos hijos estén en línea */
+    border-bottom: 1px solid #dee2e6;
+    margin: 0 20px; /* Margen para alineación con el contenido */
+    list-style-type: none; /* Elimina cualquier estilo de lista predeterminado */
+    padding-left: 0; /* Elimina el padding izquierdo si es una lista */
+}
+
+.nav-tabs .nav-item {
+    margin-bottom: 0; /* Asegura que no haya margen en la parte inferior */
+    margin-right: 10px; /* Espacio entre las pestañas */
+    list-style-type: none; /* Asegura que cada elemento no tenga estilo de lista */
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-radius: .25rem .25rem 0 0; /* Solo las esquinas superiores redondeadas */
+    color: #007bff;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #f8f9fa; /* Fondo de la pestaña inactiva */
+    text-align: center; /* Centra el texto en la pestaña */
+    text-decoration: none;
+}
+
+.nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+    text-decoration: none;
+}
+
+.tab-content {
+    padding: 20px; /* Espaciado alrededor del contenido */
+}
+
+.tab-content>.tab-pane {
+    display: none;
+}
+
+.tab-content>.active {
+    display: block;
+}
+
+.text-danger {
+    color: #dc3545;
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    .modal-dialog {
+        width: 95%;
+        max-width: 90%;
+    }
+
+    .nav-tabs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-tabs .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .modal-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

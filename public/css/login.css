@@ -1,0 +1,176 @@
+/* General styles for the login page */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Container to cover entire viewport */
+.login-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.login-image {
+    position: fixed; /* Ensures the image covers the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: hidden; /* Prevents overflow */
+}
+
+.login-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/1.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px); /* Apply blur effect */
+    z-index: -1; /* Behind other elements */
+}
+
+/* Flexbox container for content alignment */
+.login-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 2; /* Ensure content is above the blurred image */
+}
+
+/* Box for login image and form */
+.login-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem; /* Adjust padding */
+}
+
+/* Box for the login image */
+.login-image-box {
+    max-width: 150px; /* Adjust size as needed */
+    margin-right: 1rem; /* Space between image and form */
+}
+
+.login-image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+/* Form styling */
+.login-form {
+    max-width: 300px; /* Adjust size as needed */
+}
+
+.login-form h2 {
+    margin-bottom: 1rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    font-size: 1.5rem; /* Adjust font size */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 0.75rem; /* Adjust margin */
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.875rem; /* Adjust font size */
+}
+
+.form-group input {
+    border: 1px solid #000000;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.875rem; /* Adjust font size */
+    font-family: Arial, sans-serif;
+}
+
+.form-group input:focus {
+    border-color: #626263;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+    outline: none;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #929292;
+    border-color: #000000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem; /* Adjust font size */
+    border-radius: 0.25rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #434444;
+    border-color: #434444;
+}
+
+/* Link styles */
+.btn-link {
+    color: #007bff;
+    font-size: 0.75rem; /* Adjust font size */
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* Navigation button styles */
+.navigation {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 3; /* Ensure the button is above everything */
+}
+
+.navigation-button {
+    background-color: #929292;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.875rem; /* Adjust font size */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.navigation-button:hover {
+    background-color: #434444;
+}

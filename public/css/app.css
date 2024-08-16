@@ -1,0 +1,30 @@
+/* Navbar styles */
+.navbar {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+}
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.dropdown-item {
+    padding: 0.5rem 1rem;
+}
+.dropdown-item:hover {
+    background-color: #e9ecef;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+

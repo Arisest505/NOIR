@@ -1,6 +1,6 @@
 <div class="sidebar active">
     <div class="menu-btn">
-        <i class="ph-bold ph-caret-left"></i>
+        <i class="ph-bold ph-caret-left" style="font-size: 24px; color: #000000;"></i>
     </div>
     <div class="head">
         <div class="user-img">
@@ -17,15 +17,15 @@
             <ul>
                 <li class="{{ request()->routeIs('home') ? 'active' : '' }}">
                     <a href="{{ route('home') }}">
-                        <i class="icon ph-bold ph-house-simple"></i>
+                        <i class="icon ph-bold ph-house-simple" style="font-size: 24px; color: #000000;"></i>
                         <span class="text">Dashboard</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="icon ph-bold ph-user"></i>
+                        <i class="icon ph-bold ph-user" style="font-size: 24px; color: #000000;"></i>
                         <span class="text">users</span>
-                        <i class="arrow ph-bold ph-caret-down"></i>
+                        <i class="arrow ph-bold ph-caret-down" ></i>
                     </a>
                     <ul class="sub-menu">
                         <li><a href="#"><span class="text">Users</span></a></li>
@@ -34,13 +34,13 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class="icon ph-bold ph-file-text"></i>
+                        <i class="icon ph-bold ph-file-text" style="font-size: 24px; color: #000000;"></i>
                         <span class="text">posts</span>
                     </a>
                 </li>
                 <li class="{{ request()->routeIs('recursoshumanos.createuser') || request()->routeIs('recursoshumanos.ocuper') ? 'active' : '' }}">
                     <a href="#">
-                        <i class="icon ph-bold ph-calendar-blank"></i>
+                        <i class="icon ph-bold ph-calendar-blank" style="font-size: 24px; color: #000000;"></i>
                         <span class="text">Recursos Humanos</span>
                         <i class="arrow ph-bold ph-caret-down"></i>
                     </a>
@@ -59,9 +59,9 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class="icon ph-bold ph-chart-bar"></i>
+                        <i class="icon ph-bold ph-chart-bar" style="font-size: 24px; color: #000000;"></i>
                         <span class="text">icone</span>
-                        <i class="arrow ph-bold ph-caret-down"></i>
+                        <i class="arrow ph-bold ph-caret-down" style="font-size: 24px; color: #000000;"></i>
                     </a>
                     <ul class="sub-menu">
                         <li><a href="#"><span class="text">Users</span></a></li>
@@ -73,11 +73,23 @@
             </ul>
         </div>
         <div class="menu">
+            <p class="title">Warehouse</p>
+            <ul>
+                <li>
+                    <a href="{{ route('Warehouses') }}">
+                        <i class="ph ph-warehouse ph-bold" style="font-size: 24px; color: #000000;"></i>
+                        <span class="text">Warehouse</span>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+        <div class="menu">
             <p class="title">Message</p>
             <ul>
                 <li>
                     <a href="{{ route('messages.index') }}">
-                        <i class="icon ph-bold ph-chat"></i>
+                        <i class="icon ph-bold ph-chat" style="font-size: 24px; color: #000000;"></i>
                         <span class="text">Messages</span>
                         @if(isset($unreadMessages) && $unreadMessages > 0)
                             <span class="notification-badge">{{ $unreadMessages }}</span>
@@ -91,7 +103,7 @@
             <ul>
                 <li>
                     <a href="#">
-                        <i class="icon ph-bold ph-gear"></i>
+                        <i class="icon ph-bold ph-gear" style="font-size: 24px; color: #000000;"></i>
                         <span class="text">Settings</span>
                     </a>
                 </li>
@@ -103,14 +115,14 @@
         <ul>
             <li>
                 <a href="#">
-                    <i class="icon ph-bold ph-info"></i>
+                    <i class="icon ph-bold ph-info" style="font-size: 24px; color: #000000;"></i>
                     <span class="text">Help</span>
                 </a>
             </li>
             <li>
                 <a href="{{ route('logout') }}"
                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    <i class="icon ph-bold ph-sign-out"></i>
+                    <i class="icon ph-bold ph-sign-out" style="font-size: 24px; color: #000000;"></i>
                     <span class="text">Log Out</span>
                 </a>
             </li>

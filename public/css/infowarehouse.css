@@ -1,0 +1,118 @@
+.warehouse-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #343a40;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.btn-back i {
+    margin-right: 8px;
+}
+
+.warehouse-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.warehouse-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.warehouse-location, .warehouse-details {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.warehouse-location h3, .warehouse-details h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.warehouse-details p, .warehouse-location p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.btn-view-products {
+    align-self: flex-end;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #343a40;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.btn-view-products i {
+    margin-right: 8px;
+}
+
+.warehouse-info > div:last-child {
+    margin-right: 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.text-red-500 {
+    color: #e3342f;
+}
+
+.text-yellow-500 {
+    color: #f59e0b;
+}
